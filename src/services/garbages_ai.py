@@ -3,7 +3,7 @@ from PIL import Image
 
 class GarbageClassifier:
 
-    def init(self):
+    def __init__(self):
         self.pipe = pipeline(
             "image-classification",
             model="yangy50/garbage-classification"
