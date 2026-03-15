@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f4f4;
+  line-height: 1.6;
+}
+
+body {
+  animation: fadePage 0.8s ease;
+}
+
+@keyframes fadePage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #27ae60;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.nav-btn {
+  background: white;
+  color: #27ae60;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  background: white;
+}
+
+.hero h1 {
+  font-size: 40px;
+  animation: slideDown 1s ease;
+}
+
+.hero p {
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #27ae60;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.cta-testar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: none;
+  background: #27ae60;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #219150;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.residuos {
+  background: #fafafa;
+}
+
+.beneficios {
+  background: white;
+}
+
+.cta-section {
+  background: #27ae60;
+  color: white;
+  padding: 100px 20px;
+}
+
+.app {
+  text-align: center;
+  padding: 120px;
+}
+
+input {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: none;
+  background: #27ae60;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.preview img {
+  margin-top: 20px;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.preview img {
+  margin-top: 20px;
+  max-width: 350px;
+  border-radius: 10px;
+  animation: fadeImage 0.5s ease;
+}
+
+@keyframes fadeImage {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #222;
+  color: white;
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.sobre-botoes {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-outline {
+  margin-top: 20px;
+  padding: 14px 30px;
+  border: 2px solid #27ae60;
+  color: #27ae60;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.cta-outline:hover {
+  background: #27ae60;
+  color: white;
+}
+
+.modelo {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.modelo p {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.modelo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modelo li {
+  margin: 10px 0;
+}
+
+.descricao-residuos {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.dataset {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficios {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.descricao-beneficios {
+  max-width: 700px;
+  margin: 20px auto 50px auto;
+  color: #555;
+  font-size: 18px;
+}
