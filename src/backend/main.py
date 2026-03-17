@@ -5,10 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-#configurando pra liberar o cors
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -18,16 +17,24 @@ classifier = None
 
 @app.get("/")
 def read_root():
-    return {"Aplicação Fastapi rodando normalmente"}
+    return {"status": "ok"}
+
+def get_classifier():
+    global classifier
+    if classifier is None:
+        print("🔄 Carregando modelo...")
+        classifier = GarbageClassifier()
+    return classifier
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
-    global classifier
+    try:
+        model = get_classifier()
 
-    if classifier is None:
-        classifier = GarbageClassifier()  # só carrega aqui
+        image = Image.open(file.file)
+        result = model.predict(image)
 
-    image = Image.open(file.file)
-    result = classifier.predict(image)
+        return result
 
-    return result
+    except Exception as e:
+        return {"error": str(e)}
