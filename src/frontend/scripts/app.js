@@ -153,6 +153,6 @@ document.getElementById('analyzeButton').addEventListener('click', async functio
   } catch (error) {
     console.error('Erro ao enviar imagem:', error);
     showLoading(false);
-    alert('Erro ao analisar a imagem. Tente novamente.');
+    alert('Erro ao analisar a imagem. Certifique-se de que o backend está rodando no terminal conforme as instruções do README. Tente novamente.');
   }
 });
