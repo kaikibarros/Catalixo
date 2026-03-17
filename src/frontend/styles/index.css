@@ -340,3 +340,51 @@ footer {
   color: #555;
   font-size: 18px;
 }
+
+.imagem-logo {
+display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto; 
+  border-radius: 8px;
+}
+
+.visao-computacional {
+  background: #fafafa;
+}
+
+.conteudo-visao {
+  max-width: 800px; 
+  margin: 30px auto;
+  text-align: center;
+}
+
+.conteudo-visao p {
+  color: #222222;
+  margin-bottom: 40px;
+}
+
+.lista-visao {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lista-visao li {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: #555;
+  text-align: left;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.lista-visao li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}

@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 from services.garbages_ai import GarbageClassifier
 from fastapi.middleware.cors import CORSMiddleware
