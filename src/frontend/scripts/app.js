@@ -156,3 +156,30 @@ document.getElementById('analyzeButton').addEventListener('click', async functio
     alert('Erro ao analisar a imagem. Certifique-se de que o backend está rodando no terminal conforme as instruções do README. Tente novamente.');
   }
 });
+
+const predictGarbage = async (file) => {
+  try {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const response = await fetch(
+      "https://catalixo.onrender.com/predict",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Erro ao chamar a API");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Erro na requisição:", error);
+    throw error;
+  }
+};
+
+export default predictGarbage;
