@@ -5,6 +5,16 @@ from services.garbages_ai import GarbageClassifier
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+#configurando pra liberar o cors
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 classifier = GarbageClassifier()
 
 @app.get("/")
