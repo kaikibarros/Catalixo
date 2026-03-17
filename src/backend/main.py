@@ -25,7 +25,7 @@ async def predict(file: UploadFile = File(...)):
     global classifier
 
     if classifier is None:
-        classifier = GarbageClassifier()  # só carrega aqui
+        classifier = GarbageClassifier()  
 
     image = Image.open(file.file)
     result = classifier.predict(image)
