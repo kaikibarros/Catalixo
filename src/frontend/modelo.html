@@ -8,143 +8,108 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body>
+ 
     <header>
       <div class="logo">Catalixo ♻️</div>
 
       <nav>
         <a href="#sobre">Sobre</a>
         <a href="#funciona">Como funciona</a>
-        <a href="#residuos">Resíduos</a>
-        <a href="#beneficios">Benefícios</a>
+        <a href="#residuos">O Motor</a>
         <a href="app.html" class="nav-btn">Testar IA</a>
       </nav>
     </header>
 
     <section class="hero reveal">
-      <h1>Conheça Nossa Aplicação</h1>
+      <h1>Arquitetura Técnica do Sistema</h1>
 
       <p>
-        O Catalixo utiliza visão computacional para ajudar na separação correta
-        do lixo e incentivar práticas sustentáveis.
+        O projeto foi construído utilizando uma arquitetura de cliente-servidor moderna, garantindo que o processamento <br>pesado de imagens seja feito no backend,
+        enquanto o usuário interage com uma interface leve e responsiva.
       </p>
 
       <a href="app.html" class="cta">Experimentar agora</a>
     </section>
 
-    <section id="" class="sobre reveal">
-      <h2>Melazorba</h2>
 
-      <p>Melazorba</p>
 
-      <p>Melazorba</p>
-
-      <p>Melazorba</p>
-    </section>
-
-    <section id="" class="funciona reveal">
-      <h2>Mel</h2>
+    <section id="funciona" class="funciona reveal">
+      <h2>Como a Arquitetura Funciona</h2>
 
       <div class="grid">
         <div class="card reveal">
-          <h3>Mel</h3>
-          <p>Mel</p>
+          <h3>1. Frontend</h3>
+          <p>O usuário faz upload de uma imagem do resíduo através da nossa interface web. A imagem é capturada pelo navegador e preparada para envio.</p>
         </div>
 
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>2. FastAPI</h3>
+          <p>A imagem é enviada via requisição HTTP POST para o nosso servidor em Python. O FastAPI gerencia a requisição e repassa os dados para a IA.</p>
         </div>
 
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>3. Classificação Visão Computacional</h3>
+          <p>O modelo analisa as características visuais do objeto e retorna a categoria exata (ex: Papel, Plástico) para a tela do usuário.</p>
         </div>
       </div>
     </section>
 
-    <section id="" class="residuos reveal">
-      <h2>Melazorba</h2>
+    <img src="images/logo.png" alt="Ilustração das tecnologias do projeto" class="imagem-logo" />
 
-      <p class="descricao-residuos">Melazorba</p>
-
-      <div class="grid">
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-      </div>
-    </section>
-    <section id="" class="beneficios reveal">
-      <h2>Melazorba</h2>
-
-      <p class="descricao-beneficios">Melazorba</p>
+    <section id="residuos" class="residuos reveal">
+      <h2>O Motor Tecnológico</h2>
 
       <div class="grid">
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>HTML5</h3>
+          <p>Estruturação semântica da página, garantindo que o conteúdo seja acessível e organizado.</p>
         </div>
 
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>CSS3</h3>
+          <p>Estilização visual, animações e responsividade, adaptando o sistema para celulares e desktops.</p>
         </div>
 
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>JavaScript</h3>
+          <p>Traz movimento e funcionalidade para o Frontend da aplicação.</p>
         </div>
 
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>Python</h3>
+          <p>A linguagem base do nosso backend, nativo para Inteligência Artificial.</p>
         </div>
 
         <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
-        </div>
-
-        <div class="card reveal">
-          <h3>Melazorba</h3>
-          <p>Melazorba</p>
+          <h3>FastAPI</h3>
+          <p>Framework moderno responsável por criar os endpoints de predição do sistema.</p>
         </div>
       </div>
     </section>
+    
+    <section id="visao-computacional" class="visao-computacional reveal">
+      <h2>A Magia da Visão Computacional</h2>
+      
+      <div class="conteudo-visao">
+        <p>A Visão Computacional é o cérebro do nosso sistema. É essa tecnologia que permite à aplicação olhar para um objeto por uma imagem e entender do que ele é feito.</p>
+        
+        <p>Utilizamos um modelo pronto, com o apoio do <strong>Hugging Face</strong> para interfência. A classificação do lixo refere-se à separação de vários tipos de resíduos em diferentes categorias, de acordo com o impacto ambiental do seu uso, o valor da composição dos componentes do lixo e os métodos de tratamento existentes. </p>
+         O conjunto de dados de <strong>classificação de lixo é do Kaggle</strong>. Há um total de 2467 imagens neste conjunto de dados. E este modelo é um modelo de classificação de imagens para este conjunto de dados. Existem 6 classes para este conjunto de dados, que são papelão, vidro, metal, papel, plástico e lixo.</p>
+        
+        <ul class="lista-visao">
+          <li><strong>🎯 Precisão:</strong> Capacidade de distinguir entre um copo de plástico reciclável e um não reciclável.</li>
+          <li><strong>🌍 Impacto:</strong> Reduz o erro humano na hora da separação, garantindo que o lixo vá para o destino sustentável correto.</li>
+        </ul>
+      </div>
+    </section>
 
-    <section class="cta-section reveal">
+      <section class="cta-section reveal">
       <h2>Pronto para testar?</h2>
 
       <p>Envie uma imagem e veja a IA identificar o resíduo.</p>
 
       <a href="app.html" class="cta-testar">Testar aplicação</a>
     </section>
-
     <footer>
       <p>Projeto Catalixo • Tecnologia para sustentabilidade ♻️</p>
     </footer>
