@@ -5,4 +5,4 @@ requests
 numpy
 transformers
 pillow
-python-multipart
+python-multipart                                                                            
