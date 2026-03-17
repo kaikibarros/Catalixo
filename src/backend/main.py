@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 from services.garbages_ai import GarbageClassifier
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
@@ -28,3 +29,11 @@ async def predict(file: UploadFile = File(...)):
     result = classifier.predict(image)
 
     return result
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], #substituir pelo domínio do frontend
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
